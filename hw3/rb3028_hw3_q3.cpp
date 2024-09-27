@@ -31,13 +31,13 @@ int main() {
             cout << "This equation has no solutions\n";
 
         else 
-            cout << "This equation has one solution: x = " << (-c)/b << endl;
+            cout << "This is a linear equation with one solution: x = " << (-c)/b << endl;
 
         return 0;
-    }
+    } 
 
 //One repeating real solution
-    if ((b*b - 4*a*c) == 0)
+    else if ((b*b - 4*a*c) == 0) 
         cout << "This equation has a single real solution x = " << (-b)/(2*a) << endl;   
 
 //Two unique real solutions

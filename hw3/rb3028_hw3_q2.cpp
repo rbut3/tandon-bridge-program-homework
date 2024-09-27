@@ -38,5 +38,7 @@ int main() {
         std::cout << name << ", you are a Freshman!\n";
     else
         std::cout << name << ", you haven't entered college!\n";
+
+    return 0;
 }
 

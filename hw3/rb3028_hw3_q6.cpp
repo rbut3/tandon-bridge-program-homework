@@ -14,12 +14,6 @@ int main() {
     cout << "Tell me what day your call was (Mo, Tu, We, Th, Fr, Sa, or Su): ";
     cin >> weekDay; 
 
-//Confirm day is in correct format, otherwise print to user to try again.
-    if (weekDay != "Mo" && weekDay != "Tu" && weekDay != "We" && weekDay != "Th" && weekDay != "Fr" && weekDay != "Sa" && weekDay != "Su" ){
-        cout << "Invalid input; try again\n";
-        return 0;
-    } 
-
     cout << "Tell me how long your call was (integer minutes, please): ";
     cin >> callLength;
 
@@ -35,7 +29,7 @@ int main() {
         cout.precision(2);
         cout << "The cost of the call is $" << (callLength*0.15) << endl;
 
-    } else {
+    } else if (weekDay == "Mo" || weekDay == "Tu" || weekDay == "We" || weekDay == "Th" || weekDay == "Fr") {
         cout << "When did your call start (24-hour format, e.g., 00:54, 17:02, etc.)? ";
         cin >> timeHours >> timeMinutes;
         
@@ -52,6 +46,9 @@ int main() {
         
         }
 
-    } 
+    } else {
+        cout << "Invalid input; try again\n";
+    }
+
     return 0;  
 }

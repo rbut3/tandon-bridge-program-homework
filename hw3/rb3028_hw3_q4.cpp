@@ -22,11 +22,6 @@ int main() {
     cout << "1. Floor round\n" << "2. Ceiling round\n" << "3. Round to the nearest whole number\n";
     cin >> roundingChoice;
 
-    if (roundingChoice != 1 && roundingChoice != 2 && roundingChoice != 3) {
-        cout << "Invalid input; try again\n";
-        return 0; 
-    }
-
     if (realNumber == 0) {
         cout << realNumber << endl;
         return 0;
@@ -50,17 +45,15 @@ int main() {
 
         break;
 
-    default:
+    case ROUND:
 //Captures if user selects 3/ROUND
         if (realNumber < 0) {
             decimalPart = (realNumber - inputInt) * -1;
-            cout << decimalPart;
 
             if (decimalPart < 0.5) 
                 cout << inputInt << endl;
             else 
                 cout << inputInt - 1 << endl;
-            
 
         } else {
             decimalPart = realNumber - inputInt;
@@ -70,8 +63,11 @@ int main() {
             else 
                 cout << inputInt + 1 << endl;
             
-
         }
+        break;
+    
+    default:
+        cout << "Invalid input; try again\n";
         break;
     }
 
