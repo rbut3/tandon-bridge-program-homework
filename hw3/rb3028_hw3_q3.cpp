@@ -1,56 +1,57 @@
 /*HW 3, Q. 3
-
-1. Get three real number inputs a, b, and c 
-2. Plug them into the equation: ax^2 + bx + c = 0
-3. Classify the equation:
-    ** If a = 0, the equation is not valid
-    a. infinite solutions
-    b. no solution 
-    c. no real solution b^2 - 4ac < 0 
-    d. one real solution b^2 - 4ac = 0
-    e. two real solutions b^2 - 4ac > 0 
-4. If d or e, print those solutions
-
+This program takes in three real number inputs from the user. The program then determines and outputs 
+how many solutions a quadratic equation would have if you input the three real number inputs for a, b, c.
 */
 
 #include <iostream>
 #include <cmath>
 
+using namespace std;
+
 int main() {
 
-    double a, b, c, solution1, solution2, sqrtResult;
+    double a, b, c;
 
-    std::cout << "Please enter value of a, such that a is a real number and not = 0: ";
-    std::cin >> a;
-     if (a == 0)
-        std::cout << "a cannot = 0; please try again.\n";
+    cout << "Please enter value of a, such that a is a real number: ";
+    cin >> a;
 
-    else if (a != 0) {
-        std::cout << "Please enter value of b, such that b is a real number: ";
-        std::cin >> b;
+    cout << "Please enter value of b, such that b is a real number: ";
+    cin >> b;
 
-        std::cout << "Please enter value of c, such that c is a real number: ";
-        std::cin >> c; 
+    cout << "Please enter value of c, such that c is a real number: ";
+    cin >> c; 
 
-    
+//A = 0 creates a linear equation, so there will either be infinite, one or zero solutions.
+    if (a == 0) {
+        cout << "A = 0 results in a linear equation bx + c = 0\n";
+
+        if (b == 0 && c == 0)
+            cout << "This equation has infinite solutions\n";
+
+        else if (b == 0 && c != 0)
+            cout << "This equation has no solutions\n";
+
+        else 
+            cout << "This equation has one solution: x = " << (-c)/b << endl;
+
+        return 0;
+    }
 
 //One repeating real solution
-        if ((b*b - 4*a*c) == 0){
-        std::cout << "This equation has a single real solution x = " << (-b)/(2*a) << std::endl;
-        }
+    if ((b*b - 4*a*c) == 0)
+        cout << "This equation has a single real solution x = " << (-b)/(2*a) << endl;   
 
-    //Two unique real solutions
-        else if ((b*b - 4*a*c) > 0){
-            solution1 = ((-b) + sqrt((b*b)-4*a*c))/2*a;
-            solution2 = ((-b) - sqrt((b*b)-4*a*c))/2*a;
-            std::cout << "This equation has two real solutions x = " << solution1 << " and " << solution2 << std::endl;
-        }
+//Two unique real solutions
+    else if ((b*b - 4*a*c) > 0){
+        cout << "This equation has two real solutions x = " << ((-b) + sqrt((b*b)-(4*a*c)))/(2*a) << " and " 
+            << ((-b) - sqrt((b*b)-(4*a*c)))/(2*a) << endl;
+    }
 
-    //No real solutions
-        else if((b*b - 4*a*c) < 0){
-            std::cout << "This equation has no real solution\n";
-        }
-        }
+//No real solutions
+    else if((b*b - 4*a*c) < 0){
+        cout << "This equation has no real solutions\n";
+    }
+    
     return 0;
 
 }

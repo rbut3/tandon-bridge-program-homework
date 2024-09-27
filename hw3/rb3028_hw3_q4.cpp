@@ -1,9 +1,9 @@
 /*HW 3, Q. 3
-
-RB FIGURE OUT HOW TO CHECK IF REAL NUMBER INPUT*/
+This program takes in a real number input from the user and outputs the number rounded based on user 
+preferred rounding method.
+*/
 
 #include <iostream>
-
 using namespace std;
 
 const int FLOOR_ROUND = 1;
@@ -12,34 +12,70 @@ const int ROUND = 3;
 
 int main() {
 
-    double input;
-    int roundingChoice;
+    double realNumber, decimalPart;
+    int inputInt, roundingChoice;
 
     cout << "Please enter a real number: \n";
-    cin >> input; 
+    cin >> realNumber;
+    inputInt = int(realNumber);
 
     cout << "Choose your rounding method:\n";
     cout << "1. Floor round\n" << "2. Ceiling round\n" << "3. Round to the nearest whole number\n";
     cin >> roundingChoice;
 
-    if (roundingChoice != 1 && roundingChoice != 2 && roundingChoice != 3) 
+    if (roundingChoice != 1 && roundingChoice != 2 && roundingChoice != 3) {
         cout << "Invalid input; try again\n";
-    else {
+        return 0; 
+    }
+
+    if (realNumber == 0) {
+        cout << realNumber << endl;
+        return 0;
+    }
+
     switch (roundingChoice)
     {
     case FLOOR_ROUND:
-        cout << floor(input) << endl;
+        if (realNumber > 0) 
+            cout << inputInt << endl;
+         else 
+            cout << inputInt - 1 << endl;
+         
         break;
+
     case CEILING_ROUND:
-        cout << ceil(input) << endl;
+        if (realNumber < 0)
+            cout << inputInt << endl;
+        else 
+            cout << inputInt + 1 << endl;
+
         break;
 
     default:
-        cout << round(input) << endl;
+//Captures if user selects 3/ROUND
+        if (realNumber < 0) {
+            decimalPart = (realNumber - inputInt) * -1;
+            cout << decimalPart;
+
+            if (decimalPart < 0.5) 
+                cout << inputInt << endl;
+            else 
+                cout << inputInt - 1 << endl;
+            
+
+        } else {
+            decimalPart = realNumber - inputInt;
+            
+            if (decimalPart < 0.5)
+                cout << inputInt << endl;
+            else 
+                cout << inputInt + 1 << endl;
+            
+
+        }
         break;
-    }  
     }
-    
+
     return 0;
 
 }
