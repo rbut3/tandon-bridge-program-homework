@@ -1,5 +1,5 @@
 /*HW 3, Q. 5
-This program calculates and prints the user's BMI based on height and weight inputs. */
+This program calculates and prints the user's BMI based on height and weight inputs.*/
 
 #include <iostream>
 using namespace std;

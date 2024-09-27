@@ -1,7 +1,6 @@
 /*HW 3, Q. 3
 This program takes in three real number inputs from the user. The program then determines and outputs 
-how many solutions a quadratic equation would have if you input the three real number inputs for a, b, c.
-*/
+how many solutions a quadratic equation would have if you input the three real number inputs for a, b, c.*/
 
 #include <iostream>
 #include <cmath>

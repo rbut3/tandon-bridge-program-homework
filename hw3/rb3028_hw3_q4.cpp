@@ -1,7 +1,6 @@
 /*HW 3, Q. 4
 This program takes in a real number input from the user and outputs the number rounded based on user 
-preferred rounding method.
-*/
+preferred rounding method.*/
 
 #include <iostream>
 using namespace std;
