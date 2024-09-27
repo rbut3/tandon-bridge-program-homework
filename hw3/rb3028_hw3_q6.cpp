@@ -1,4 +1,4 @@
-/*HW 3, Q. 5
+/*HW 3, Q. 6
 This program computes the cost of a long-distance call based on when the call took place and how long it was.*/
 
 #include <iostream>
