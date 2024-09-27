@@ -22,20 +22,18 @@ int main() {
         cout << "Invalid input.\n";
         return 0;
     }
+
+    cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+    cout.precision(2);
         
     if (weekDay == "Sa" || weekDay == "Su") {
-        cout.setf(ios::fixed);
-        cout.setf(ios::showpoint);
-        cout.precision(2);
+        
         cout << "The cost of the call is $" << (callLength*0.15) << endl;
 
     } else if (weekDay == "Mo" || weekDay == "Tu" || weekDay == "We" || weekDay == "Th" || weekDay == "Fr") {
         cout << "When did your call start (24-hour format, e.g., 00:54, 17:02, etc.)? ";
         cin >> timeHours >> timeMinutes;
-        
-        cout.setf(ios::fixed);
-        cout.setf(ios::showpoint);
-        cout.precision(2);
 
 //Differentiate outputs based on start time of call, given different costs.
         if (timeHours < 8 || timeHours > 18) {
