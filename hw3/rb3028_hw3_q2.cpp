@@ -21,7 +21,7 @@ int main() {
 
 //Checking for correct year format.
     if (gradYear < 1000 || currentYear < 1000){
-        std::cout << "Invalid year format; try again.\n";
+        std::cout << "Invalid year format.\n";
         return 0;
     }
 

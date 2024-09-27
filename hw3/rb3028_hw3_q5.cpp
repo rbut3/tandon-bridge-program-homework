@@ -13,7 +13,7 @@ int main() {
 
 //Confirm weight is above zero.
     if (weightPounds <= 0){
-        cout << "Invalid entry; try again\n";
+        cout << "Invalid entry.\n";
         return 0;
     }
     
@@ -22,7 +22,7 @@ int main() {
 
 //Confirm height is above zero.        
     if (heightInches <= 0){
-        cout << "Invalid entry; try again\n";
+        cout << "Invalid entry.\n";
         return 0;
 
     }

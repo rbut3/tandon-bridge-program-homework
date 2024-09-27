@@ -33,7 +33,7 @@ price of the two items.*/
 
 //Applies member discount if user answered yes (either Y or y).
     if (memberChar != 'Y' && memberChar != 'y' && memberChar != 'N' && memberChar != 'n'){
-        std::cout << "Invalid input; try again.\n";
+        std::cout << "Invalid input.\n";
         return 0;
     }
     
@@ -45,7 +45,7 @@ price of the two items.*/
 
 //Verifies tax rate is non-negative and, if so, calculates the tax rate multiple needed to calculate the total price for the user.
     if (taxRate < 0){ 
-        std::cout << "Invalid input; try again.\n";
+        std::cout << "Invalid input.\n";
         return 0;
     }
     

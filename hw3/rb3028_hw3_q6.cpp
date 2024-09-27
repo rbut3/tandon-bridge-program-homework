@@ -19,7 +19,7 @@ int main() {
 
  //Confirm call length is 0 or higher; negative call time is illogical.       
     if (callLength < 0) {
-        cout << "Invalid input; try again\n";
+        cout << "Invalid input.\n";
         return 0;
     }
         
@@ -47,7 +47,7 @@ int main() {
         }
 
     } else {
-        cout << "Invalid input; try again\n";
+        cout << "Invalid input.\n";
     }
 
     return 0;  
