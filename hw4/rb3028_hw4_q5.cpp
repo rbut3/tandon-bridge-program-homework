@@ -16,7 +16,11 @@ int main() {
         int r = row;
         if (row >= inputInteger) 
             r = (2*inputInteger - row) - 1;
-        
+
+/*Logic below for printing either a space or an asterisk. The below enters spaces when row 
+is bigger than the column value and also when column is bigger than 2 times the input 
+minus 1, minus the row value.*/
+
         for (int column = 0; column < ((2*inputInteger) - 1); column++) {  
             if (column >= (2*inputInteger - 1) - r)
                 cout << " ";
