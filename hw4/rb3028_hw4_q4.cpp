@@ -1,4 +1,6 @@
-/*HW 4, Q. 4*/
+/*HW 4, Q. 4
+Write two versions of a program that reads a sequence of positive integers from the user,
+calculates their geometric mean, and prints the geometric mean.*/
 
 #include<iostream>
 #include<cmath>

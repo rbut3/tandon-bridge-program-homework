@@ -8,34 +8,30 @@ using namespace std;
 
 int main() {
 
-    int decimalNumber, originalNumber, binaryDigit = 0, remainder, counter = 2;
+    int decimalNumber, inputNumber;
 
     cout << "Enter decimal number: ";
-    cin >> decimalNumber;
+    cin >> inputNumber;
 
-    originalNumber = decimalNumber;
+    decimalNumber = inputNumber;
 
-    cout << "The binary representation of " << decimalNumber << " is ";
+    cout << "The binary representation of " << inputNumber << " is ";
 
-    for (counter = 31; originalNumber > 0; counter--) {
+    for (int counter = 31; decimalNumber > 0; counter--) {
         int power = pow(double(2), double(counter));
 
-        if (power > decimalNumber){
+        if (power > inputNumber){
             continue;
-        } else if (originalNumber >= power){
+        } else if (decimalNumber >= power){
             cout << "1";
-            originalNumber -= power;
+            decimalNumber -= power;
         } else {
             cout << "0";
-            originalNumber = originalNumber;
         }
     
     }
 
-    if (originalNumber == 0)
-        cout << "0\n";
-    else 
-        cout << "1\n";
-
+    cout << decimalNumber << endl;
+    
     return 0;
 }

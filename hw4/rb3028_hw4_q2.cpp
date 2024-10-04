@@ -1,4 +1,6 @@
-/*HW 4, Q. 2*/
+/*HW 4, Q. 2
+Write a program that reads from the user a (decimal) number, and prints it’s representation in
+the simplified Roman numerals system.*/
 
 #include <iostream>
 #include <string>
@@ -58,7 +60,7 @@ int main() {
         cout << romanString << endl;
     }
     
-    cout << originalNum << " is equal to " << romanString; 
+    cout << originalNum << " is equal to " << romanString << endl; 
 
     return 0;
 

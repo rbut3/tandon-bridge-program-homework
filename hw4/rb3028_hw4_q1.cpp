@@ -24,7 +24,7 @@ int main() {
 
     cout << endl << "Second version of program: for loop.\n";
 
-    for (counter = 1; counter <= inputNum; counter++) {
+    for (counter = 0; counter < inputNum; counter++) {
         evenNum += 2;
         cout << evenNum << endl;
     }
