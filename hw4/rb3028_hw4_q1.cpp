@@ -24,6 +24,9 @@ int main() {
 
     cout << endl << "Second version of program: for loop.\n";
 
+    cout << "Tell me a positive integer: ";
+    cin >> inputNum;
+    
     for (counter = 0; counter < inputNum; counter++) {
         evenNum += 2;
         cout << evenNum << endl;

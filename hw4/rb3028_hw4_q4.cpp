@@ -32,6 +32,7 @@ int main() {
     userInput = 1;
     productOfInputs = 1;
     
+    cout << endl; 
     cout << "Second version of program.\n";
     cout << "Please enter a non-empty sequence of positive integers, each one in a separate line. End your sequence by typing -1: ";
     
@@ -43,7 +44,7 @@ int main() {
             productOfInputs *= userInput;
     } while (userInput != -1);
 
-    geomMean = pow(double(productOfInputs), (1.0/originalLength));
+    geomMean = pow(double(productOfInputs), double(1.0/originalLength));
     cout << "The geometric mean is: " << geomMean << endl;
     
     return 0;
