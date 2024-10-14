@@ -9,11 +9,10 @@ int main() {
 
     int inputNum, counter = 1, evenNum = 0;
 
+    cout << endl << "First version of program: while loop.\n";
     cout << "Tell me a positive integer: ";
     cin >> inputNum;
-
-    cout << endl << "First version of program: while loop.\n";
-
+    
     while (counter <= inputNum) {
         evenNum += 2;
         cout << evenNum << endl; 

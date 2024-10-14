@@ -17,7 +17,7 @@ int main() {
 
     cout << "The binary representation of " << inputNumber << " is ";
 
-    for (int counter = 31; counter >= 0; counter--) {
+    for (int counter = 30; counter >= 0; counter--) {
         int power = pow(double(2), double(counter));
 
         if (power > inputNumber){
