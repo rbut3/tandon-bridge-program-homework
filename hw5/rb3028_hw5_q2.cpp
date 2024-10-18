@@ -1,19 +1,7 @@
 /*HW5, Q2
-Implement	a	number	guessing	game.	The	program	should	randomly	choose	an	integer	
-between	1	and	100	(inclusive),	and	have	the	user	try	to	guess	that	number.	
 
-Implementations	guidelines:
-
-1. The	user	can	guess	at	most	5	times.
-2. Before	each	guess	the	program	announces:
-• An	updated	guessing-range,	taking	in	to	account	previous	guesses	and	responses.
-• The	number	of	guesses	that	the	user	has	left.
-3. If	the	user	guessed	correctly,	the	program	should	announce	that,	and	also	tell	how	many	
-guesses	the	user	used.
-4. If	the	user	guessed	wrong,	and	there	are	still	guesses	left,	the	program	should	tell	the	
-user	if	the	number	(it chose)	is	bigger	or	smaller	than	the	number	that	the	user	guessed.
-5. If	the	user	didn’t	guess	the	number	in	all	of	the	5	tries,	the	program	should	reveal	the	
-number	it	chose.*/
+Implement a	number	guessing game. The program should randomly choose an integer between 1 and 100 (inclusive),
+and	have the user try to guess that number.*/
 
 #include <iostream>
 #include <cstdlib>
@@ -34,17 +22,17 @@ int main() {
         cout << "Your guess: ";
         cin >> userInput;
 
-        if (userInput < lowerLimit || userInput > upperLimit) {
+        if (a !=4 && (userInput < lowerLimit || userInput > upperLimit)) {
             cout << "Number outside of range." << endl;
             continue;
         }
         
         if (userInput == randomNumber) {
-            cout << "Congrats! You guessed my number in " << a+1 << " guess(es).";
+            cout << "Congrats! You guessed my number in " << a+1 << " guess(es)." << endl;
             break;
         }
 
-        if (a ==4) {
+        if (a == 4) {
             cout << "Out of guesses! My number is " << randomNumber << "." << endl;
             break;
         } else if (userInput < randomNumber) {
@@ -54,9 +42,6 @@ int main() {
             cout << "Wrong! My number is smaller." << endl;
             upperLimit = userInput-1;
         } 
-
     }
-
     return 0;
-
 }

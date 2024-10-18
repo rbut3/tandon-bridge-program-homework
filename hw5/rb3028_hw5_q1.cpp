@@ -14,10 +14,7 @@ int main(){
 
     for (int a = 0; a < userInput; a++) {
         for (int b = 0; b < userInput; b++) {
-            if (b == a)
-                cout << (a+1)*(a+1) << "\t";
-            else 
-                cout << (a*b)+(a+b)+1 << "\t";
+            cout << (a*b)+(a+b)+1 << "\t";
         }
        cout << endl;
     }
