@@ -1,4 +1,4 @@
-/*HW 6, Q. 2
+/*HW 6, Q.2
 Write a program	that, prints a ‘pine tree’ consisting of triangles of increasing sizes, filled	
 with a character. */
 
