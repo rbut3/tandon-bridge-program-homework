@@ -23,11 +23,11 @@ int main() {
 }
 
 double eApprox(int n) {
-    double e = 1, temp = 1;
+    double e = 1, factorial = 1;
    
     for(int i = 1; i <= n; i++){
-        temp *= 1.0/i; 
-        e = e + temp;
+        factorial *= i; 
+        e += (1.0/factorial);
     }
 
     return e;

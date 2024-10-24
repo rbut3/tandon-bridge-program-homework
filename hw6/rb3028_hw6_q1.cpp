@@ -1,30 +1,38 @@
 /*HW 6, Q.1
-Can go up to the 46th fibonacci number*/
+This is a two-part assignment.
+    1. Write a function int fib(int n) that returns the n-th 
+        element of the Fibonacci sequence.
+    2. Write a program that prompts the user to enter a positive
+        integer, num, and then prints the nums element in the 
+        Fibonacci sequence.*/
 
 #include <iostream>
 using namespace std; 
 
-int fibNum(int userInput);
-
+int fib(int n);
+/*Input: user input in the form of a positive integer
+Output: n-th element of the Fibonacci sequence
+Assumptions: Given that the type is int, this will only capture
+through Fibonacci number 46. */
 
 int main() {
     int userInput;
 
-    cout << "Tell me a positive integer: ";
+    cout << "Please enter a positive integer: ";
     cin >> userInput;
 
-    cout << fibNum(userInput) << endl;
+    cout << fib(userInput) << endl;
 
     return 0; 
 }
 
-int fibNum(int userInput) {
-    int num1 = 1, num2 = 1, fibNum = 1; 
+int fib(int n) {
+    int num1 = 1, num2 = 1, fibNum; 
 
-    if(userInput == 1 || userInput == 2)
+    if(n == 1 || n == 2)
         return 1;
 
-    for(int i = 3; i <= userInput; i++){
+    for(int i = 3; i <= n; i++){
         fibNum = num1 + num2;
         num1 = num2;
         num2 = fibNum; 
